@@ -1,0 +1,36 @@
+#Java 
+Data types :
+1.Dynamic type language
+Two types :
+1.Primitive data type
+2.Non-primitive data type
+To check the data type - typeof
+1.Primitive data type : predefined  ;we can store single values
+1.Numbers : integers,floats
+2.String : stream of characters enclosed in quotes
+ ---single, double ,backtick quotes ;
+3.Boolean : true or false
+4.Null : empty value or no value
+5.undefined : declared variable with no value
+
+1)Numbers :
+EX:1,-1,-4.4,5.6
+2.Strings : stream of characters enclosed in quotes
+ ---single , double , backtick quotes ;
+Single and Double works same
+---Back ticks introduced in ES6 version
+---it provides extra functionality ; we can insert the variables into them
+
+String Concatination :
+a=virat
+b=kholi
+#Reactjs Student = virat kholi 
+
+#Hackerrank
+#leetcode  #Js, react js
+#written test : coding test
+#technical
+#conditional statements: 1-10  #block of times
+
+
+
