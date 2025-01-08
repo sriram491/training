@@ -1,0 +1,27 @@
+JavaScript Operators:
+1)	Arithmetic: 
++, -, *, %, ++, --, **
+2)	Logical Operators:
+And(&&) = T and T = T
+OR(||) = T or F = F
+NOT(!)	= 
+3)	Relational Operators:
+==
+<
+>
+CONDITIONAL OPERATORS
+?
+
+Window methods:
+Alert() -> shows alert msg
+Prompt() -> takes user input
+
+
+//code
+
+        alert("this page isn't responding")
+        console.log(alert)
+        document.write(alert)
+
+        let name = prompt("enter your name")
+        alert(name)
