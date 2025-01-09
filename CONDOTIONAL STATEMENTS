@@ -1,0 +1,21 @@
+conditional Statements :
+--to make the set instructons execute only when the given condition is True
+--used to decide whether the code has  to be executed or skip based on the given condition
+--line-line(sequence)
+Block of  code : set of instructions:
+
+condition: An expression  that evaluates an result(True or False)
+Ex: console.log(5>6)
+--Methods:
+if
+if-else
+else if
+switch
+Ternary Operator
+if: only one possible condition:
+--if the condition is True it will execute other wise it skip
+
+Syntax:
+if(condition){
+-----block of code
+}
