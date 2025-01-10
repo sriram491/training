@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        let A = parseFloat(prompt("Enter the no.of working days:"));
+        let B = parseFloat(prompt("Enter the no. of days for absent:"));
+        function checkEligibility(percentage) {
+            if (percentage < 75) {
+                return "Not eligible to write the exam.";
+            } else {
+                return "Eligible to write the exam.";
+            }
+        }
+        let average = (A + B) / 2;
+        let result = checkEligibility(average);
+        console.log(result);
+        alert(result);
+    </script>
+</body>
+</html>

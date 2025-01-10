@@ -2,30 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <script>
-        //let a=3.5
-        //let b='3.5'
-        //document.write(a+b, "<br>")
-          //console.log("hi + a+b")
-          //document.write("hi + a+b","<br>")
-          // console.log('hi + a+b')
-          // document.write('hi +a+b',"<br>")
-          //console.log(`hi + ${a + b}`) 
-          //document.write(`hi + ${a + b}`)
-
-
-        //let a="virat"
-        //let b="kholi"
-        //let age=30
-        //let greeting=`I am ${a}, my age is ${age} years old`
-        //console.log(greeting)
-
-        let x=null;
-        document.write
-    </script>   
+        let a = parseInt(prompt("Enter a number:"));
+        if (a % 2 === 0 && a % 3 === 0) {
+            console.log(`${a} is divisible by both 2 and 3.`);
+        } 
+        else if (a % 2 === 0) {
+            console.log(`${a} is divisible by 2.`);
+        } 
+        else if (a % 3 === 0) {
+            console.log(`${a} is divisible by 3.`);
+        } 
+        else {
+            console.log(`${a} is not divisible by 2 or 3.`);
+        }
+    </script>
 </body>
 </html>
