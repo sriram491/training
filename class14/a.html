@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        function mainFunction(callback){
+            console.log("Executing main function")
+            callback()
+        }
+        function callbackFunction(){
+            console.log("Executing callback function")
+        }
+        mainFunction(callbackFunction)
+    </script> -->
+    
+
+    <!-- <script>
+        function greet(name,callback){
+            console.log("Hello, " + name)
+            callback();
+        }
+        function goodbye(){
+            console.log("Goodbye!")
+        }
+        greet("rb",goodbye)
+
+    </script> -->   
+
+    <!-- <script>
+        function greet(name,callback){
+            console.log("Hello, " + name)
+            callback();
+        }
+        greet("rb", function() {
+            console.log("Goodbye!");
+            }); 
+    </script> -->
+
+    <!-- <script>
+        const greet = function( str ) {
+            console.log("Welcome to ", str);
+            
+        };
+            
+        greet("GeeksforGeeks!");
+    </script> -->
+
+    <!-- <script>
+        const add = (a, b) => a + b;
+        console.log(add(3, 4)); 
+    </script> -->
+
+    <!-- <script>
+        setTimeout(function() {
+            console.log("This message appears after 2 seconds.");
+        }, 2000);        
+    </script> -->
+
+
+    <script>
+        function fetchData(callback) {
+            console.log("Fetching data...");
+            
+            setTimeout(function () {
+                console.log("Data fetched...");
+                callback(); 
+            }, 2000); 
+        }    
+        function processData() {
+            console.log("Processing data...");
+        }
+        fetchData(processData);
+    </script>
+    
+
+</body>
+</html>
