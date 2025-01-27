@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('success');
+            }, 1000);
+            }
+        ).then((data) => {
+            console.log(data);  
+            return 'some other data';
+        }
+        ).then((data) => {
+            console.log(data);
+        }
+        ).catch((error) => {
+            console.log(error);
+        }  
+        );
+    </script> -->
+
+
+
+    <!-- <script>
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(5);
+                }, 1000);
+            }
+            );
+            promise.then((result) => {
+                console.log(result);
+                return result*2
+            })
+            .then((result) => {
+                console.log();result
+                return result +3;
+                })
+            .then(result=>{
+                console.log(result);
+            })
+                .catch((error) => {
+                    console.log("error",error);
+                    })
+    </script> -->
+
+
+    <script>
+        let fetchData = new Promise((resolve, reject) => {
+            let dataFetched = true; // Change this to true if you want to simulate successful fetching
+            setTimeout(() => {
+                if (dataFetched) {
+                    resolve('Data fetched successfully');
+                } else {
+                    reject('Data not fetched');
+                }
+            }, 2000);
+        });
+    
+        fetchData
+            .then((result) => {
+                console.log(result); // Logs the resolved message
+                return result;
+            })
+            .catch((error) => {
+                console.log(error); // Logs the rejected message
+            });
+    </script>
+    
+
+    
+</body>
+</html>
