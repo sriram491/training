@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Removing childNode </h1>
+    <h2> I am in Hyd </h2>
+    <ul>
+        <li>Hulk</li>
+        <li>Spiderman</li>
+        <li>Ironman</li>
+    </ul>
+    <script>
+        const ul = document.querySelector('ul');
+        const lists = Array.from(document.querySelectorAll('li')); 
+
+        <!-- console.log(ul);
+        console.log(lists); -->
+
+        for (const list of lists) {
+            console.log(`Removing: ${list.textContent}`);
+            ul.removeChild(list);
+            console.log(list);
+        }
+    </script>    
+</body>
+</html>
