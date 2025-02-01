@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculation</title>
+</head>
+<body>
+    <h1>Discount Calculation</h1>
+
+    <!-- Form to get input from user -->
+    <form id="discountForm">
+        <label for="amount">Enter Amount Spent (₹): </label>
+        <input type="number" id="amount" required>
+        <br><br>
+        
+        <label for="premiumMember">Are you a Premium Member? </label>
+        <select id="premiumMember">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+        <br><br>
+        
+        <button type="submit">Calculate Discount</button>
+    </form>
+
+    <h2>Result:</h2>
+    <p id="result"></p>
+
+    <script>
+        // Function to calculate the discount
+        function calculateDiscount(amount, isPremiumMember) {
+            let discount = 0;
+
+            // Check spending and assign basic discount
+            if (amount > 100) {
+                discount = 20; // 20% discount
+            } else if (amount > 50 && amount <= 100) {
+                discount = 10; // 10% discount
+            }
+
+            // Check if the customer is a premium member for additional discount
+            if (isPremiumMember) {
+                discount += 5; // Add 5% extra discount for premium members
+            }
+
+            // Calculate the final amount after discount
+            let finalAmount = amount - (amount * discount / 100);
+
+            return {
+                originalAmount: amount,
+                discount: discount,
+                finalAmount: finalAmount
+            };
+        }
+
+        // Handle form submission
+        document.getElementById('discountForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting and reloading the page
+
+            // Get input values
+            let amount = parseFloat(document.getElementById('amount').value);
+            let isPremiumMember = document.getElementById('premiumMember').value === 'yes';
+
+            // Validate amount
+            if (isNaN(amount) || amount <= 0) {
+                document.getElementById('result').textContent = "Please enter a valid amount.";
+                return;
+            }
+
+            // Call the discount calculation function
+            let result = calculateDiscount(amount, isPremiumMember);
+
+            // Display the result
+            document.getElementById('result').textContent = `
+                Original Amount: ₹${result.originalAmount}
+                \nDiscount Applied: ${result.discount}%
+                \nFinal Amount after Discount: ₹${result.finalAmount.toFixed(2)}
+            `;
+        });
+    </script>
+</body>
+</html>

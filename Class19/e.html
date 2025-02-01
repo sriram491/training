@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let amount=prompt("Enter the amount customer spends")
+    if(amount>100){
+        let discount=amount*0.2
+        let final=amount-discount
+        document.write("The final bill is:"+final)
+    }
+    else if(amount>50 && amount<=100){
+        let discount=amount*0.1
+        let final=amount-discount
+        document.write("The final bill is:"+final)
+    }
+    let customer=confirm("are you premium number?")
+    if(customer){
+        let discount=amount*0.05
+        let final=amount-discount
+        document.write("The final bill is:"+final)}
+    </script>
+</body>
+</html>

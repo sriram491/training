@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkVotingEligibility(age, isCitizen, passedCitizenshipTest) {
+            if (age < 18) {
+              return "You cannot vote because you are under 18.";
+            }
+          
+            if (isCitizen) {
+              return "You are eligible to vote!";
+            }
+          
+            if (passedCitizenshipTest) {
+              return "You are eligible to vote!";
+            }
+          
+            return "You are not eligible to vote because you are not a citizen and have not passed the citizenship test.";
+          }
+          
+          function main() {
+            const age = parseInt(prompt("Please enter your age:"));
+            const isCitizen = prompt("Are you a citizen? (yes/no):").toLowerCase() === "yes";
+            let passedCitizenshipTest = false;
+          
+            if (!isCitizen) {
+              passedCitizenshipTest = prompt("Have you passed the citizenship test? (yes/no):").toLowerCase() === "yes";
+            }
+          
+            const result = checkVotingEligibility(age, isCitizen, passedCitizenshipTest);
+          
+            console.log(result);
+            alert(result); 
+          }
+          
+          main();
+                console.log(name+" is not eligible for voting")
+                
+            
+    </script>
+</body>
+</html>
