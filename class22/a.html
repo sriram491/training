@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb Toggle</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            transition: background-color 0.5s ease;
+        }
+
+        .light-bulb {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body id="body">
+    <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png" 
+         class="light-bulb" 
+         id="bulbImage" 
+         alt="Light Bulb">
+    <button class="button" id="toggleButton" onclick="Togglelight()">Turn ON</button>
+
+    <script>
+        let isOn = false;
+
+        function Togglelight() {
+            const body = document.getElementById("body");
+            const bulbImage = document.getElementById("bulbImage");
+            const toggleButton = document.getElementById("toggleButton");
+
+            isOn = !isOn;
+            
+            if (isOn) {
+                body.style.backgroundColor = "skyblue";
+                bulbImage.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+                toggleButton.innerText = "Turn OFF";
+            } else {
+                body.style.backgroundColor = "black";
+                bulbImage.src = "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+                toggleButton.innerText = "Turn ON";
+            }
+        }
+    </script>
+</body>
+</html>
